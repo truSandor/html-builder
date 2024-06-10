@@ -16,12 +16,11 @@ public class HTML extends HtmlElement {
         sb.append("<html>")
                 .append(System.lineSeparator());
         for (HtmlElement e : elements) {
-            sb.append(" ".repeat(document.getIndentation()))
+            sb.append(document.getIndentation())
                     .append(e.toString())
                     .append(System.lineSeparator());
         }
-        sb.append(System.lineSeparator())
-                .append("</html>");
+        sb.append("</html>");
 
         return sb.toString();
     }
