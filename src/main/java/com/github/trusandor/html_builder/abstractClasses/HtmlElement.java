@@ -2,6 +2,7 @@ package com.github.trusandor.html_builder.abstractClasses;
 
 import com.github.trusandor.html_builder.implementations.HtmlDocument;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -12,6 +13,7 @@ public abstract class HtmlElement {
 
     public HtmlElement(HtmlDocument document) {
         this.document = document;
+        elements = new ArrayList<>();
     }
 
     public abstract String toString();
