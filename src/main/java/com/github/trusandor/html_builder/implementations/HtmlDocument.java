@@ -1,6 +1,7 @@
 package com.github.trusandor.html_builder.implementations;
 
 import com.github.trusandor.html_builder.abstractClasses.Document;
+import com.github.trusandor.html_builder.implementations.elements.HTML;
 
 public class HtmlDocument extends Document {
 
@@ -8,7 +9,7 @@ public class HtmlDocument extends Document {
 
     public HtmlDocument() {
         docType = "html";
-        html = new HTML();
+        html = new HTML(this);
     }
 
     @Override
@@ -16,7 +17,7 @@ public class HtmlDocument extends Document {
         StringBuilder sb = new StringBuilder();
         sb.append(String.format("<!DOCTYPE %s>", docType))
                 .append(System.lineSeparator())
-                .append(html.toString());
+                .append(html);
         return sb.toString();
     }
 }
