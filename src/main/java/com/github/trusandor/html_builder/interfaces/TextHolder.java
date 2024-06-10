@@ -1,4 +1,4 @@
-package com.github.trusandor.html_builder.elements.interfaces;
+package com.github.trusandor.html_builder.interfaces;
 
 public interface TextHolder extends Element {
     void setInnerText();
