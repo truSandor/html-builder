@@ -6,10 +6,19 @@ import com.github.trusandor.html_builder.implementations.elements.HTML;
 public class HtmlDocument extends Document {
 
     private final HTML html;
+    private int indentation = 2;
 
     public HtmlDocument() {
         docType = "html";
         html = new HTML(this);
+    }
+
+    public int getIndentation() {
+        return indentation;
+    }
+
+    public void setIndentation(int indentation) {
+        this.indentation = indentation;
     }
 
     @Override
