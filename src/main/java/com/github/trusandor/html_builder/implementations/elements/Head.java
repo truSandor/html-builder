@@ -19,8 +19,8 @@ public class Head extends HtmlElement {
                     .append(e)
                     .append(System.lineSeparator());
         }
-        sb.append("</head>")
-                .append(System.lineSeparator());
+        sb.append(document.getIndentation())
+                .append("</head>");
         return sb.toString();
     }
 }
